@@ -1,0 +1,23 @@
+.card {
+    margin: 1.25rem;
+}
+
+.card-title {
+    color: red;
+}
+
+.p-card .p-card-title {
+    color: red;
+}
+
+.userdetail {
+    display: inline-block;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.comment {
+    border: 1px solid;
+    margin: 1.25rem;
+    padding: 10px;
+}

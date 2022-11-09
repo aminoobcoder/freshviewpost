@@ -1,0 +1,22 @@
+<ng-container *ngFor="let postUser of postUsers">
+  <div *ngIf="isCardClicked">
+    <mat-card (click)="onClickedPost(postUser.post)" class="card">
+      <mat-card-content>
+           <mat-card-title> {{postUser.post.title}}</mat-card-title>
+           <mat-card-subtitle> {{postUser.post.body}} </mat-card-subtitle>
+      </mat-card-content>
+      <mat-card-actions >
+        <p class="userdetail" >{{postUser.user.name}}</p>
+        <p class="userdetail" >{{postUser.user.email}}</p>
+        <p class="userdetail" >{{postUser.user.gender}}</p>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</ng-container>
+<mat-paginator (page)="onPageChange($event)" [length]="1000"
+              [pageSize]="postUsers.length"
+              aria-label="Select page">
+</mat-paginator>
+
+
+

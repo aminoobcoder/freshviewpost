@@ -1,0 +1,14 @@
+<mat-card class="card">
+  <mat-card-content *ngIf="post">
+    <mat-card-title> {{ post.title }}</mat-card-title>
+    <mat-card-subtitle> {{ post.body }} </mat-card-subtitle>
+  </mat-card-content>
+  <mat-card-actions *ngIf="user">
+    <p class="userdetail">{{ user.name }}</p>
+    <p class="userdetail">{{ user.email }}</p>
+    <p class="userdetail">{{ user.gender }}</p>
+  </mat-card-actions>
+</mat-card>
+<div *ngFor="let comment of comments">
+  <p class="comment" >{{ comment.body }}</p>
+</div>
